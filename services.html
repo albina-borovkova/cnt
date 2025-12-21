@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги и мастера | Le Rêve</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-spa logo-icon"></i>
+                <span class="logo-text">Le Rêve</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span class="nav-text">Главная</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link active">
+                            <i class="fas fa-spa nav-icon"></i>
+                            <span class="nav-text">Услуги и мастера</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link btn-nav">
+                            <i class="far fa-calendar-alt nav-icon"></i>
+                            <span class="nav-text">Запись онлайн</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+    <main class="main services-page">
+        <div class="container">
+            <h1>Наши услуги и мастера</h1>
+            <p class="subtitle">Выберите услугу, чтобы увидеть мастеров, которые её выполняют</p>
+            <div class="services-system">
+                <input type="radio" id="service-hair" name="service" checked class="service-radio">
+                <input type="radio" id="service-nails" name="service" class="service-radio">
+                <input type="radio" id="service-pedicure" name="service" class="service-radio">
+                <input type="radio" id="service-cosmetology" name="service" class="service-radio">
+                <input type="radio" id="service-makeup" name="service" class="service-radio">
+                <input type="radio" id="service-massage" name="service" class="service-radio">
+                <div class="services-column">
+                    <h2><i class="fas fa-cut"></i> Услуги</h2>
+                    <div class="services-list">
+                        <label for="service-hair" class="service-item">
+                            <h3>Стрижка и укладка</h3>
+                            <p>от 1500 ₽</p>
+                            <div class="service-desc">Профессиональная стрижка, укладка, сушка</div>
+                        </label>
+                        
+                        <label for="service-nails" class="service-item">
+                            <h3>Маникюр</h3>
+                            <p>от 1200 ₽</p>
+                            <div class="service-desc">Классический и аппаратный маникюр</div>
+                        </label>
+                        
+                        <label for="service-pedicure" class="service-item">
+                            <h3>Педикюр</h3>
+                            <p>от 1800 ₽</p>
+                            <div class="service-desc">Комплексный уход за стопами</div>
+                        </label>
+                        
+                        <label for="service-cosmetology" class="service-item">
+                            <h3>Косметология</h3>
+                            <p>от 2500 ₽</p>
+                            <div class="service-desc">Чистка лица и уходовые процедуры</div>
+                        </label>
+                        
+                        <label for="service-makeup" class="service-item">
+                            <h3>Макияж</h3>
+                            <p>от 2000 ₽</p>
+                            <div class="service-desc">Дневной, вечерний, свадебный макияж</div>
+                        </label>
+                        
+                        <label for="service-massage" class="service-item">
+                            <h3>Массаж</h3>
+                            <p>от 2200 ₽</p>
+                            <div class="service-desc">Расслабляющий массаж тела</div>
+                        </label>
+                    </div>
+                </div>   
+                <div class="masters-column">
+                    <h2 class="masters-title">
+                        <i class="fas fa-user-tie"></i> 
+                        <span class="title-service" data-service="hair">Мастера по стрижке и укладке</span>
+                        <span class="title-service" data-service="nails">Мастера по маникюру</span>
+                        <span class="title-service" data-service="pedicure">Мастера по педикюру</span>
+                        <span class="title-service" data-service="cosmetology">Мастера-косметологи</span>
+                        <span class="title-service" data-service="makeup">Визажисты</span>
+                        <span class="title-service" data-service="massage">Массажисты</span>
+                    </h2>
+                    
+                 
+                    <div class="masters-container">
+                        <div class="masters-group" data-service="hair">
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/paric1.jpg');"></div>
+                                <div class="master-info">
+                                    <h3>Анна Смирнова</h3>
+                                    <p class="master-spec">Топ-стилист</p>
+                                    <p class="master-exp">Опыт: 10 лет</p>
+                                    <p class="master-desc">Специализируется на вечерних и свадебных прическах</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">Стрижка</span>
+                                        <span class="service-tag">Окрашивание</span>
+                                        <span class="service-tag">Укладка</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/paric2.jpg');"></div>
+                                <div class="master-info">
+                                    <h3>Ирина Петрова</h3>
+                                    <p class="master-spec">Парикмахер-универсал</p>
+                                    <p class="master-exp">Опыт: 6 лет</p>
+                                    <p class="master-desc">Мастер по стрижкам любой сложности</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">Стрижка</span>
+                                        <span class="service-tag">Мелирование</span>
+                                        <span class="service-tag">Уход</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masters-group" data-service="nails">
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/manik1.jpg');"></div>
+                                <div class="master-info">
+                                    <h3>Мария Иванова</h3>
+                                    <p class="master-spec">Мастер ногтевого сервиса</p>
+                                    <p class="master-exp">Опыт: 7 лет</p>
+                                    <p class="master-desc">Делает идеальный маникюр, специалист по дизайну ногтей любой сложности.</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">Маникюр</span>
+                                        <span class="service-tag">Дизайн</span>
+                                        <span class="service-tag">Гель-лак</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/manik2.jpg');"></div>
+                                <div class="master-info">
+                                    <h3>Алина Котова</h3>
+                                    <p class="master-spec">Художник по ногтям</p>
+                                    <p class="master-exp">Опыт: 5 лет</p>
+                                    <p class="master-desc">Специализируется на авторском дизайне и росписи ногтей. Работает с премиальными материалами.</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">Художественная роспись</span>
+                                        <span class="service-tag">Стемпинг</span>
+                                        <span class="service-tag">Френч</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masters-group" data-service="pedicure">
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/pedic1.jpg');"></div>
+                                <div class="master-info">
+                                    <h3>Ольга Сидорова</h3>
+                                    <p class="master-spec">Специалист по педикюру</p>
+                                    <p class="master-exp">Опыт: 8 лет</p>
+                                    <p class="master-desc">Эксперт по медицинскому педикюру и уходу за проблемными стопами.</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">Педикюр</span>
+                                        <span class="service-tag">Медицинский</span>
+                                        <span class="service-tag">Аппаратный</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/pedic2.jpg');"></div>
+                                <div class="master-info">
+                                    <h3>Ирина Морозова</h3>
+                                    <p class="master-spec">Мастер SPA-педикюра</p>
+                                    <p class="master-exp">Опыт: 6 лет</p>
+                                    <p class="master-desc">Проводит расслабляющие Спа-процедуры для ног с использованием натуральных скрабов и масок.</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">SPA-уход</span>
+                                        <span class="service-tag">Парафинотерапия</span>
+                                        <span class="service-tag">Массаж стоп</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="masters-group" data-service="cosmetology">
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/kosm1.jpg');"></div>
+                                <div class="master-info">
+                                    <h3>Елена Козлова</h3>
+                                    <p class="master-spec">Косметолог-эстетист</p>
+                                    <p class="master-exp">Опыт: 12 лет</p>
+                                    <p class="master-desc">Проводит анти-возрастные процедуры, чистки лица, подбирает домашний уход.</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">Чистка</span>
+                                        <span class="service-tag">Пилинг</span>
+                                        <span class="service-tag">Уход</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/kosm2.jpg');"></div>
+                                <div class="master-info">
+                                    <h3>Светлана Фёдорова</h3>
+                                    <p class="master-spec">Визажист-косметолог</p>
+                                    <p class="master-exp">Опыт: 9 лет</p>
+                                    <p class="master-desc">Специалист по перманентному макияжу и контурной пластике.</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">Макияж</span>
+                                        <span class="service-tag">Перманент</span>
+                                        <span class="service-tag">Уход</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masters-group" data-service="makeup">
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/viz1.jpg');"></div>
+                                <div class="master-info">
+                                    <h3>Анна Смирнова</h3>
+                                    <p class="master-spec">Визажист</p>
+                                    <p class="master-exp">Опыт: 9 лет</p>
+                                    <p class="master-desc">Эксперт по свадебному и вечернему макияжу, работает с известными брендами.</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">Свадебный</span>
+                                        <span class="service-tag">Вечерний</span>
+                                        <span class="service-tag">Дневной</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/viz2.jpg');"></div>
+                                <div class="master-info">
+                                    <h3>Кристина Лебедева</h3>
+                                    <p class="master-spec">Гримёр для фотосессий</p>
+                                    <p class="master-exp">Опыт: 7 лет</p>
+                                    <p class="master-desc">Создаёт макияж для профессиональных фотосессий, видеосъёмок и мероприятий.</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">Фотомакияж</span>
+                                        <span class="service-tag">Сценический</span>
+                                        <span class="service-tag">Коррекция</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masters-group" data-service="massage">
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/mas.jpg');"></div>
+                                <div class="master-info">
+                                    <h3>Мария Волкова</h3>
+                                    <p class="master-spec">Массажист</p>
+                                    <p class="master-exp">Опыт: 11 лет</p>
+                                    <p class="master-desc">Специалист по лечебному и спортивному массажу, работает с проблемами спины.</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">Лечебный</span>
+                                        <span class="service-tag">Спортивный</span>
+                                                        <span class="service-tag">Релакс</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="master-card">
+                                <div class="master-img" style="background-image: url('images/mas1.jpg');;"></div>
+                                <div class="master-info">
+                                    <h3>Татьяна Новикова</h3>
+                                    <p class="master-spec">Спа-терапевт</p>
+                                    <p class="master-exp">Опыт: 8 лет</p>
+                                    <p class="master-desc">Проводит расслабляющие и антицеллюлитные массажи с использованием аромамасел.</p>
+                                    <div class="master-services">
+                                        <span class="service-tag">Антицеллюлитный</span>
+                                        <span class="service-tag">Лимфодренажный</span>
+                                        <span class="service-tag">Ароматерапия</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+    
+</body>
+</html>
