@@ -190,3 +190,301 @@
     margin-bottom: 15px;
     color: #555;
 }
+
+
+/* 2 страница */
+
+.services-page .main {
+    padding-top: 40px;
+}
+.services-system {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-top: 30px;
+    position: relative;
+}
+.service-radio {
+    display: none;
+}
+.services-column {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+.services-column h2 {
+    color: #444;
+    margin-bottom: 25px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.services-column h2 i {
+    color: #d4a574;
+}
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.service-item {
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+}
+.service-item:hover {
+    border-color: #d4a574;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 165, 116, 0.1);
+}
+.service-item h3 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+.service-item > p {
+    color: #d4a574;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.service-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+}
+#service-hair:checked ~ .services-column label[for="service-hair"],
+#service-nails:checked ~ .services-column label[for="service-nails"],
+#service-pedicure:checked ~ .services-column label[for="service-pedicure"],
+#service-cosmetology:checked ~ .services-column label[for="service-cosmetology"],
+#service-makeup:checked ~ .services-column label[for="service-makeup"],
+#service-massage:checked ~ .services-column label[for="service-massage"] {
+    border-color: #d4a574;
+    background-color: rgba(212, 165, 116, 0.05);
+}
+#service-hair:checked ~ .services-column label[for="service-hair"]::after,
+#service-nails:checked ~ .services-column label[for="service-nails"]::after,
+#service-pedicure:checked ~ .services-column label[for="service-pedicure"]::after,
+#service-cosmetology:checked ~ .services-column label[for="service-cosmetology"]::after,
+#service-makeup:checked ~ .services-column label[for="service-makeup"]::after,
+#service-massage:checked ~ .services-column label[for="service-massage"]::after { content: '✓';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #d4a574;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.masters-column {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.masters-column h2 {
+    color: #444;
+    margin-bottom: 25px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.masters-column h2 i {
+    color: #d4a574;
+}
+
+.selected-service-text {
+    color: #d4a574;
+    font-weight: 600;
+}
+
+.masters-container {
+    position: relative;
+    min-height: 500px;
+}
+
+.masters-group {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+#service-hair:checked ~ .masters-column .masters-group[data-service="hair"],
+#service-nails:checked ~ .masters-column .masters-group[data-service="nails"],
+#service-pedicure:checked ~ .masters-column .masters-group[data-service="pedicure"],
+#service-cosmetology:checked ~ .masters-column .masters-group[data-service="cosmetology"],
+#service-makeup:checked ~ .masters-column .masters-group[data-service="makeup"],
+#service-massage:checked ~ .masters-column .masters-group[data-service="massage"] {
+    display: grid;
+}
+.masters-title {
+    color: #444;
+    margin-bottom: 25px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 40px;
+}
+.masters-title i {
+    color: #d4a574;
+}
+.title-service {
+    display: none;
+    color: #d4a574;
+    font-weight: 600;
+}
+#service-hair:checked ~ .masters-column .title-service[data-service="hair"],
+#service-nails:checked ~ .masters-column .title-service[data-service="nails"],
+#service-pedicure:checked ~ .masters-column .title-service[data-service="pedicure"],
+#service-cosmetology:checked ~ .masters-column .title-service[data-service="cosmetology"],
+#service-makeup:checked ~ .masters-column .title-service[data-service="makeup"],
+#service-massage:checked ~ .masters-column .title-service[data-service="massage"] {
+    display: inline;
+}
+
+
+.master-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    border: 1px solid #f0f0f0;
+}
+.master-card:hover {
+    transform: translateY(-5px);
+}
+.master-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.master-info {
+    padding: 20px;
+}
+.master-card h3 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+.master-spec {
+    color: #d4a574;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.master-exp {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.master-desc {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.master-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.service-tag {
+    background: rgba(212, 165, 116, 0.1);
+    color: #d4a574;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.action-buttons {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+.action-buttons .btn {
+    padding: 12px 40px;
+    font-size: 16px;
+}
+.portfolio-content h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.portfolio-content h4 i {
+    color: #d4a574;
+}
+.portfolio-items {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.portfolio-item {
+    flex: 0 0 auto;
+    width: 120px;
+    margin-right: 10px;
+}
+.portfolio-img {
+    height: 80px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+.portfolio-item:hover .portfolio-img {
+    transform: scale(1.05);
+}
+.portfolio-item p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+    line-height: 1.3;
+}
+.portfolio-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+.portfolio-stats span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+}
+.portfolio-stats i {
+    color: #d4a574;
+}
