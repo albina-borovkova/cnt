@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись - Шаг 1 | Салон красоты "Le Rêve"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+<header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-spa logo-icon"></i>
+                <span class="logo-text">Le Rêve</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span class="nav-text">Главная</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">
+                            <i class="fas fa-spa nav-icon"></i>
+                            <span class="nav-text">Услуги и мастера</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link btn-nav">
+                            <i class="far fa-calendar-alt nav-icon"></i>
+                            <span class="nav-text">Запись онлайн</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <main class="main booking-page">
+        <div class="container">
+            <div class="booking-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Услуга и мастер</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Дата и контакты</div>
+                </div>
+            </div>
+
+            <h1>Запись на услугу</h1>
+            <p class="subtitle">Шаг 1: Выберите услугу и мастера</p>
+            <div class="booking-system">
+                <input type="radio" id="book-hair" name="book-service" checked class="service-radio">
+                <input type="radio" id="book-nails" name="book-service" class="service-radio">
+                <input type="radio" id="book-pedicure" name="book-service" class="service-radio">
+                <input type="radio" id="book-cosmetology" name="book-service" class="service-radio">
+                <input type="radio" id="book-makeup" name="book-service" class="service-radio">
+                <input type="radio" id="book-massage" name="book-service" class="service-radio">
+                <div class="booking-services">
+                    <h2><i class="fas fa-cut"></i> Выберите услугу</h2>
+                    <div class="services-list">
+                        <label for="book-hair" class="service-item">
+                            <h3>Стрижка и укладка</h3>
+                            <p>от 1500 ₽</p>
+                            <div class="service-desc">50-90 минут</div>
+                        </label>
+                        
+                        <label for="book-nails" class="service-item">
+                            <h3>Маникюр</h3>
+                            <p>от 1200 ₽</p>
+                            <div class="service-desc">60-120 минут</div>
+                        </label>
+                        
+                        <label for="book-pedicure" class="service-item">
+                            <h3>Педикюр</h3>
+                            <p>от 1800 ₽</p>
+                            <div class="service-desc">60-90 минут</div>
+                        </label>
+                        
+                        <label for="book-cosmetology" class="service-item">
+                            <h3>Косметология</h3>
+                            <p>от 2500 ₽</p>
+                            <div class="service-desc">45-120 минут</div>
+                        </label>
+                        
+                        <label for="book-makeup" class="service-item">
+                            <h3>Макияж</h3>
+                            <p>от 2000 ₽</p>
+                            <div class="service-desc">30-60 минут</div>
+                        </label>
+                        
+                        <label for="book-massage" class="service-item">
+                            <h3>Массаж</h3>
+                            <p>от 2200 ₽</p>
+                            <div class="service-desc">60 минут</div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="booking-masters">
+                    <h2><i class="fas fa-user-tie"></i> Выберите мастера</h2>
+                    
+                    <div class="masters-container">
+
+                        <div class="masters-group" data-service="hair">
+                            <div class="master-select">
+                                <input type="radio" id="master-anna" name="master" value="anna" checked>
+                                <label for="master-anna" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/paric1.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Анна Смирнова</h4>
+                                        <p class="master-spec">Топ-стилист</p>
+                                        <p class="master-exp">Опыт: 10 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="master-select">
+                                <input type="radio" id="master-irina" name="master" value="irina">
+                                <label for="master-irina" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/paric2.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Ирина Петрова</h4>
+                                        <p class="master-spec">Парикмахер-универсал</p>
+                                        <p class="master-exp">Опыт: 6 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="masters-group" data-service="nails">
+                            <div class="master-select">
+                                <input type="radio" id="master-maria" name="master" value="maria">
+                                <label for="master-maria" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/manik1.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Мария Иванова</h4>
+                                        <p class="master-spec">Мастер ногтевого сервиса</p>
+                                        <p class="master-exp">Опыт: 7 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="master-select">
+                                <input type="radio" id="master-alina" name="master" value="alina">
+                                <label for="master-alina" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/manik2.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Алина Котова</h4>
+                                        <p class="master-spec">Художник по ногтям</p>
+                                        <p class="master-exp">Опыт: 5 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="masters-group" data-service="pedicure">
+                            <div class="master-select">
+                                <input type="radio" id="master-olga" name="master" value="olga">
+                                <label for="master-olga" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/pedic1.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Ольга Сидорова</h4>
+                                        <p class="master-spec">Специалист по педикюру</p>
+                                        <p class="master-exp">Опыт: 8 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="master-select">
+                                <input type="radio" id="master-irina" name="master" value="irina">
+                                <label for="master-yulia" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/pedic2.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Ирина Морозова</h4>
+                                        <p class="master-spec">Мастер SPA-педикюра</p>
+                                        <p class="master-exp">Опыт: 6 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="masters-group" data-service="cosmetology">
+                            <div class="master-select">
+                                <input type="radio" id="master-elena" name="master" value="elena">
+                                <label for="master-elena" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/kosm1.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Елена Козлова</h4>
+                                        <p class="master-spec">Косметолог-эстетист</p>
+                                        <p class="master-exp">Опыт: 12 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="master-select">
+                                <input type="radio" id="master-svetlana" name="master" value="svetlana">
+                                <label for="master-svetlana" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/kosm2.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Светлана Фёдорова</h4>
+                                        <p class="master-spec">Визажист-косметолог</p>
+                                        <p class="master-exp">Опыт: 9 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                      
+
+                        <div class="masters-group" data-service="makeup">
+                            <div class="master-select">
+                                <input type="radio" id="master-anna-makeup" name="master" value="anna-makeup">
+                                <label for="master-anna-makeup" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/viz1.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Анна Смирнова</h4>
+                                        <p class="master-spec">Визажист</p>
+                                        <p class="master-exp">Опыт: 9 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="master-select">
+                                <input type="radio" id="master-kristina" name="master" value="kristina">
+                                <label for="master-kristina" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/viz2.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Кристина Лебедева</h4>
+                                        <p class="master-spec">Гримёр для фотосессий</p>
+                                        <p class="master-exp">Опыт: 7 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="masters-group" data-service="massage">
+                            <div class="master-select">
+                                <input type="radio" id="master-mariya" name="master" value=" mariya">
+                                <label for="master-sergey" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/mas.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Мария Волкова</h4>
+                                        <p class="master-spec">Массажист</p>
+                                        <p class="master-exp">Опыт: 11 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="master-select">
+                                <input type="radio" id="master-tatyana" name="master" value="tatyana">
+                                <label for="master-tatyana" class="master-option">
+                                    <div class="master-img-small" style="background-image: url('images/mas1.jpg');"></div>
+                                    <div class="master-info-small">
+                                        <h4>Татьяна Новикова</h4>
+                                        <p class="master-spec">SPA-терапевт</p>
+                                        <p class="master-exp">Опыт: 8 лет</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-summary">
+                        <h3><i class="fas fa-clipboard-check"></i> Ваш выбор</h3>
+                        <div class="summary-item">
+                            <span>Услуга:</span>
+                            <strong id="summary-service">Стрижка и укладка</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Мастер:</span>
+                            <strong id="summary-master">Анна Смирнова</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Примерное время:</span>
+                            <strong>50-90 минут</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <a href="booking-step2.html" class="btn btn-large">Продолжить →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
