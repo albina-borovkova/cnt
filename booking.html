@@ -173,9 +173,10 @@
                                     </div>
                                 </label>
                             </div>
+
                             
                             <div class="master-select">
-                                <input type="radio" id="master-irina" name="master" value="irina">
+                                <input type="radio" id="master-yulia" name="master" value="yulia">
                                 <label for="master-yulia" class="master-option">
                                     <div class="master-img-small" style="background-image: url('images/pedic2.jpg');"></div>
                                     <div class="master-info-small">
@@ -244,8 +245,8 @@
                         
                         <div class="masters-group" data-service="massage">
                             <div class="master-select">
-                                <input type="radio" id="master-mariya" name="master" value=" mariya">
-                                <label for="master-sergey" class="master-option">
+                                <input type="radio" id="master-mariya" name="master" value="mariya">
+                                <label for="master-mariya" class="master-option">
                                     <div class="master-img-small" style="background-image: url('images/mas.jpg');"></div>
                                     <div class="master-info-small">
                                         <h4>Мария Волкова</h4>
@@ -271,26 +272,102 @@
                     
                     <div class="booking-summary">
                         <h3><i class="fas fa-clipboard-check"></i> Ваш выбор</h3>
-                        <div class="summary-item">
+                        
+                        <div class="summary-item summary-service">
                             <span>Услуга:</span>
-                            <strong id="summary-service">Стрижка и укладка</strong>
+                            <strong>
+                                <span id="summary-service-text" class="summary-service-text">Стрижка и укладка</span>
+                            </strong>
                         </div>
-                        <div class="summary-item">
+                        
+                        <div class="summary-item summary-master">
                             <span>Мастер:</span>
-                            <strong id="summary-master">Анна Смирнова</strong>
+                            <strong>
+                                <span id="summary-master-text" class="summary-master-text">Анна Смирнова</span>
+                            </strong>
                         </div>
-                        <div class="summary-item">
+                        
+                        <div class="summary-item summary-time">
                             <span>Примерное время:</span>
-                            <strong>50-90 минут</strong>
+                            <strong>
+                                <span id="summary-time-text" class="summary-time-text">50-90 минут</span>
+                            </strong>
                         </div>
                     </div>
+
+                    <div class="action-buttons">
+                        <a href="booking2.html" class="btn btn-large" id="continue-btn">Продолжить →</a>
+                    </div>
+                        
+                        <div class="summary-item summary-time">
+                            <span>Примерное время:</span>
+                            <strong>
+                                <span class="summary-time-text"></span>
+                            </strong>
+                        </div>
+                    </div>
+
                     
                     <div class="action-buttons">
-                        <a href="booking-step2.html" class="btn btn-large">Продолжить →</a>
+                        <a href="booking2.html" class="btn btn-large">Продолжить →</a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const serviceText = document.getElementById('summary-service-text');
+                const masterText = document.getElementById('summary-master-text');
+                const timeText = document.getElementById('summary-time-text');
+                const continueBtn = document.getElementById('continue-btn');
+                const serviceMap = {
+                    'hair': { name: 'Стрижка и укладка', time: '50-90 минут', price: 'от 1500 ₽' },
+                    'nails': { name: 'Маникюр', time: '60-120 минут', price: 'от 1200 ₽' },
+                    'pedicure': { name: 'Педикюр', time: '60-90 минут', price: 'от 1800 ₽' },
+                    'cosmetology': { name: 'Косметология', time: '45-120 минут', price: 'от 2500 ₽' },
+                    'makeup': { name: 'Макияж', time: '30-60 минут', price: 'от 2000 ₽' },
+                    'massage': { name: 'Массаж', time: '60 минут', price: 'от 2200 ₽' }};
+                const masterMap = {
+                    'anna': 'Анна Смирнова',
+                    'irina': 'Ирина Петрова',
+                    'maria': 'Мария Иванова',
+                    'alina': 'Алина Котова',
+                    'olga': 'Ольга Сидорова',
+                    'yulia': 'Ирина Морозова',
+                    'elena': 'Елена Козлова',
+                    'svetlana': 'Светлана Фёдорова',
+                    'anna-makeup': 'Анна Смирнова',
+                    'kristina': 'Кристина Лебедева',
+                    'mariya': 'Мария Волкова',
+                    'tatyana': 'Татьяна Новикова'};
+                function updateSummary() {
+                    const selectedService = document.querySelector('input[name="book-service"]:checked');
+                    const serviceId = selectedService.id.replace('book-', '');
+                    const selectedMaster = document.querySelector('input[name="master"]:checked');
+                    const masterId = selectedMaster ? selectedMaster.value : 'anna';
+                    if (serviceMap[serviceId]) {
+                        serviceText.textContent = serviceMap[serviceId].name;
+                        timeText.textContent = serviceMap[serviceId].time;
+                    }
+                    
+                    if (masterMap[masterId]) {
+                        masterText.textContent = masterMap[masterId];
+                    }
+                    continueBtn.href = `booking2.html?service=${serviceId}&master=${masterId}`;
+                }
+                document.querySelectorAll('input[name="book-service"]').forEach(radio => {
+                    radio.addEventListener('change', updateSummary);
+                });
+                document.querySelectorAll('input[name="master"]').forEach(radio => {
+                    radio.addEventListener('change', updateSummary);
+                });
+               
+                updateSummary();
+            });
+        </script>
 </body>
 </html>
