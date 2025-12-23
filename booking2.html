@@ -1,0 +1,251 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись - Шаг 2 | Салон красоты "Le Rêve"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-spa logo-icon"></i>
+                <span class="logo-text">Le Rêve</span>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span class="nav-text">Главная</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">
+                            <i class="fas fa-spa nav-icon"></i>
+                            <span class="nav-text">Услуги и мастера</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link btn-nav">
+                            <i class="far fa-calendar-alt nav-icon"></i>
+                            <span class="nav-text">Запись онлайн</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+    <main class="main booking-page">
+        <div class="container">
+            <div class="booking-steps">
+                <div class="step completed">
+                    <div class="step-number">✓</div>
+                    <div class="step-text">Услуга и мастер</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Дата и контакты</div>
+                </div>
+            </div>
+            <h1>Запись на услугу</h1>
+            <p class="subtitle">Шаг 2: Выберите дату, время и укажите контактные данные</p>
+            <div class="previous-choice">
+                <h3><i class="fas fa-check-circle"></i> Вы выбрали</h3>
+                <div class="choice-details">
+                    <div class="choice-item">
+                        <span class="choice-label">Услуга:</span>
+                        <span class="choice-value">Стрижка и укладка</span>
+                    </div>
+                    <div class="choice-item">
+                        <span class="choice-label">Мастер:</span>
+                        <span class="choice-value">Анна Смирнова</span>
+                    </div>
+                    <div class="choice-item">
+                        <span class="choice-label">Стоимость:</span>
+                        <span class="choice-value">от 1500 ₽</span>
+                    </div>
+                </div>
+                <a href="booking.html" class="change-link">Изменить выбор</a>
+            </div>
+            <form class="booking-form" action="booking-success.html" method="GET">
+                <div class="form-columns">
+                    <div class="form-column">
+                        <h2><i class="far fa-calendar-alt"></i> Дата и время</h2>
+                        
+                        <div class="form-group">
+                            <label for="booking-date">Дата записи</label>
+                            <div class="date-picker">
+                                <input type="date" id="booking-date" name="date" required>
+                            </div>
+                            <div class="date-hint">
+                                <i class="fas fa-info-circle"></i> Запись доступна на 2 недели вперёд
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Время записи</label>
+                            <div class="time-slots">
+                                <div class="time-row">
+                                    <span class="time-label">Утро:</span>
+                                    <div class="time-options">
+                                        <input type="radio" id="time-10" name="time" value="10:00" required>
+                                        <label for="time-10" class="time-option">10:00</label>
+                                        
+                                        <input type="radio" id="time-11" name="time" value="11:00">
+                                        <label for="time-11" class="time-option">11:00</label>
+                                        
+                                        <input type="radio" id="time-12" name="time" value="12:00">
+                                        <label for="time-12" class="time-option">12:00</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="time-row">
+                                    <span class="time-label">День:</span>
+                                    <div class="time-options">
+                                        <input type="radio" id="time-14" name="time" value="14:00">
+                                        <label for="time-14" class="time-option">14:00</label>
+                                        
+                                        <input type="radio" id="time-15" name="time" value="15:00">
+                                        <label for="time-15" class="time-option">15:00</label>
+                                        
+                                        <input type="radio" id="time-16" name="time" value="16:00">
+                                        <label for="time-16" class="time-option">16:00</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="time-row">
+                                    <span class="time-label">Вечер:</span>
+                                    <div class="time-options">
+                                        <input type="radio" id="time-17" name="time" value="17:00">
+                                        <label for="time-17" class="time-option">17:00</label>
+                                        
+                                        <input type="radio" id="time-18" name="time" value="18:00">
+                                        <label for="time-18" class="time-option">18:00</label>
+                                        
+                                        <input type="radio" id="time-19" name="time" value="19:00">
+                                        <label for="time-19" class="time-option">19:00</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notes">Дополнительные пожелания</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Например: предпочитаемый стиль, особенности и т.д."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <h2><i class="far fa-user"></i> Ваши данные</h2>
+                        
+                        <div class="form-group">
+                            <label for="client-name">Ваше имя</label>
+                            <input type="text" id="client-name" name="name" placeholder="Иванова Мария" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="client-phone">Номер телефона</label>
+                            <input type="tel" id="client-phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX" required>
+                            <div class="input-hint">Мы перезвоним для подтверждения записи</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="client-email">Электронная почта (необязательно)</label>
+                            <input type="email" id="client-email" name="email" placeholder="ваш@email.ru">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Предпочитаемый способ связи</label>
+                            <div class="contact-options">
+                                <input type="radio" id="contact-phone" name="contact" value="phone" checked>
+                                <label for="contact-phone" class="contact-option">
+                                    <i class="fas fa-phone"></i> Телефон
+                                </label>
+                                
+                                <input type="radio" id="contact-whatsapp" name="contact" value="whatsapp">
+                                <label for="contact-whatsapp" class="contact-option">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </label>
+                                
+                                <input type="radio" id="contact-telegram" name="contact" value="telegram">
+                                <label for="contact-telegram" class="contact-option">
+                                    <i class="fab fa-telegram"></i> Telegram
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-terms">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">Я соглашаюсь с условиями записи и правилами отмены</label>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <a href="booking-step1.html" class="btn btn-outline">← Назад</a>
+                            <button type="submit" class="btn btn-large">Завершить запись</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function getUrlParams() {
+                const params = new URLSearchParams(window.location.search);
+                return {
+                    service: params.get('service') || 'hair',
+                    master: params.get('master') || 'anna'
+                };
+            }
+            const urlParams = getUrlParams();
+            const serviceMap = {
+                'hair': { name: 'Стрижка и укладка', time: '50-90 минут', price: 'от 1500 ₽' },
+                'nails': { name: 'Маникюр', time: '60-120 минут', price: 'от 1200 ₽' },
+                'pedicure': { name: 'Педикюр', time: '60-90 минут', price: 'от 1800 ₽' },
+                'cosmetology': { name: 'Косметология', time: '45-120 минут', price: 'от 2500 ₽' },
+                'makeup': { name: 'Макияж', time: '30-60 минут', price: 'от 2000 ₽' },
+                'massage': { name: 'Массаж', time: '60 минут', price: 'от 2200 ₽' }
+            };
+            const masterMap = {
+                'anna': 'Анна Смирнова',
+                'irina': 'Ирина Петрова',
+                'maria': 'Мария Иванова',
+                'alina': 'Алина Котова',
+                'olga': 'Ольга Сидорова',
+                'yulia': 'Ирина Морозова',
+                'elena': 'Елена Козлова',
+                'svetlana': 'Светлана Фёдорова',
+                'anna-makeup': 'Анна Смирнова',
+                'kristina': 'Кристина Лебедева',
+                'mariya': 'Мария Волкова',
+                'tatyana': 'Татьяна Новикова'
+            };
+            const serviceElement = document.querySelector('.choice-details .choice-item:nth-child(1) .choice-value');
+            const masterElement = document.querySelector('.choice-details .choice-item:nth-child(2) .choice-value');
+            const priceElement = document.querySelector('.choice-details .choice-item:nth-child(3) .choice-value');
+            
+            if (serviceElement && serviceMap[urlParams.service]) {
+                serviceElement.textContent = serviceMap[urlParams.service].name;
+            }
+            
+            if (masterElement && masterMap[urlParams.master]) {
+                masterElement.textContent = masterMap[urlParams.master];
+            }
+            
+            if (priceElement && serviceMap[urlParams.service]) {
+                priceElement.textContent = serviceMap[urlParams.service].price;
+            }
+            const changeLink = document.querySelector('.change-link');
+            if (changeLink) {
+                changeLink.href = `booking.html?service=${urlParams.service}&master=${urlParams.master}`;
+            }
+        });
+    </script>
+</body>
+</html>
