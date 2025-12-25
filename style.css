@@ -315,7 +315,39 @@
 /* 2 страница */
 
 .services-page .main {
-    padding-top: 40px;
+    padding: 60px 0 100px;
+    background: linear-gradient(135deg, #faf9ff 0%, #f5f3fa 100%);
+    min-height: calc(100vh - 80px);
+}
+.services-page h1 {
+    font-size: 2.8rem;
+    color: #3a2c5f;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.services-page h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #d4a574, #9a7baf);
+    border-radius: 2px;
+}
+.services-page .subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
 }
 .services-system {
     display: grid;
@@ -323,29 +355,49 @@
     gap: 40px;
     margin-top: 30px;
     position: relative;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .service-radio {
     display: none;
 }
 .services-column {
     background: white;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(106, 81, 109, 0.08);
     height: fit-content;
     position: sticky;
-    top: 100px;
+    top: 120px;
+    border: 1px solid rgba(255,255,255,0.8);
+    position: relative;
+    overflow: hidden;
+}
+.services-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #d4a574, #9a7baf);
 }
 .services-column h2 {
-    color: #444;
+    color: #3a2c5f;
     margin-bottom: 25px;
-    font-size: 24px;
+    font-size: 1.8rem;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 700;
 }
 .services-column h2 i {
-    color: #d4a574;
+    background: linear-gradient(to right, #d4a574, #9a7baf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.8rem;
 }
 .services-list {
     display: flex;
@@ -353,34 +405,36 @@
     gap: 15px;
 }
 .service-item {
-    padding: 20px;
-    border-radius: 8px;
+    padding: 22px;
+    border-radius: 12px;
     border: 2px solid #f0f0f0;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     display: block;
+    background: white;
 }
 .service-item:hover {
     border-color: #d4a574;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(212, 165, 116, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 165, 116, 0.15);
 }
 .service-item h3 {
-    color: #333;
+    color: #3a2c5f;
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 .service-item > p {
     color: #d4a574;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.2rem;
     margin-bottom: 8px;
 }
 .service-desc {
     color: #666;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 #service-hair:checked ~ .services-column label[for="service-hair"],
 #service-nails:checked ~ .services-column label[for="service-nails"],
@@ -389,34 +443,73 @@
 #service-makeup:checked ~ .services-column label[for="service-makeup"],
 #service-massage:checked ~ .services-column label[for="service-massage"] {
     border-color: #d4a574;
-    background-color: rgba(212, 165, 116, 0.05);
+    background: linear-gradient(to right, rgba(212, 165, 116, 0.05), rgba(154, 123, 175, 0.05));
+    box-shadow: 0 5px 15px rgba(212, 165, 116, 0.1);
 }
 #service-hair:checked ~ .services-column label[for="service-hair"]::after,
 #service-nails:checked ~ .services-column label[for="service-nails"]::after,
 #service-pedicure:checked ~ .services-column label[for="service-pedicure"]::after,
 #service-cosmetology:checked ~ .services-column label[for="service-cosmetology"]::after,
 #service-makeup:checked ~ .services-column label[for="service-makeup"]::after,
-#service-massage:checked ~ .services-column label[for="service-massage"]::after { content: '✓';
+#service-massage:checked ~ .services-column label[for="service-massage"]::after {
+    content: '✓';
     position: absolute;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    background: #d4a574;
+    background: linear-gradient(to right, #d4a574, #9a7baf);
     color: white;
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 3px 8px rgba(212, 165, 116, 0.3);
 }
 .masters-column {
     background: white;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(106, 81, 109, 0.08);
+    border: 1px solid rgba(255,255,255,0.8);
+    position: relative;
+    overflow: hidden;
 }
+.masters-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #d4a574, #9a7baf);
+}
+.masters-title {
+    color: #3a2c5f;
+    margin-bottom: 35px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 40px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+.masters-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #d4a574, #9a7baf);
+    border-radius: 2px;
+}
+
 
 .masters-column h2 {
     color: #444;
@@ -440,17 +533,22 @@
     position: relative;
     min-height: 500px;
 }
-
 .masters-group {
     display: none;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
     margin-bottom: 30px;
-    animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.6s ease;
 }
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { 
+        opacity: 0; 
+        transform: translateY(15px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 }
 #service-hair:checked ~ .masters-column .masters-group[data-service="hair"],
 #service-nails:checked ~ .masters-column .masters-group[data-service="nails"],
@@ -470,12 +568,20 @@
     min-height: 40px;
 }
 .masters-title i {
-    color: #d4a574;
+    background: linear-gradient(to right, #d4a574, #9a7baf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.8rem;
 }
 .title-service {
     display: none;
     color: #d4a574;
     font-weight: 600;
+    background: linear-gradient(to right, #d4a574, #9a7baf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 #service-hair:checked ~ .masters-column .title-service[data-service="hair"],
 #service-nails:checked ~ .masters-column .title-service[data-service="nails"],
@@ -489,45 +595,76 @@
 
 .master-card {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
+    box-shadow: 0 8px 20px rgba(106, 81, 109, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+.master-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #d4a574, #9a7baf);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.master-card:hover::before {
+    opacity: 1;
 }
 .master-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(106, 81, 109, 0.15);
 }
 .master-img {
-    height: 200px;
+    height: 220px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: transform 0.5s ease;
+}
+.master-card:hover .master-img {
+    transform: scale(1.05);
 }
 .master-info {
-    padding: 20px;
+    padding: 25px;
 }
 .master-card h3 {
-    color: #333;
-    margin-bottom: 8px;
-    font-size: 20px;
+    color: #3a2c5f;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 .master-spec {
     color: #d4a574;
     font-weight: 600;
-    margin-bottom: 5px;
-    font-size: 16px;
+    margin-bottom: 8px;
+    font-size: 1rem;
 }
 .master-exp {
     color: #777;
-    font-size: 14px;
-    margin-bottom: 12px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.master-exp::before {
+    content: '⭐';
+    font-size: 0.9rem;
 }
 .master-desc {
     color: #666;
-    font-size: 15px;
-    line-height: 1.5;
-    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    border-left: 3px solid rgba(212, 165, 116, 0.3);
+    padding-left: 12px;
 }
 .master-services {
     display: flex;
@@ -535,12 +672,18 @@
     gap: 8px;
 }
 .service-tag {
-    background: rgba(212, 165, 116, 0.1);
+    background: linear-gradient(to right, rgba(212, 165, 116, 0.1), rgba(154, 123, 175, 0.1));
     color: #d4a574;
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 13px;
+    font-size: 0.85rem;
     font-weight: 500;
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    transition: all 0.3s ease;
+}
+.master-card:hover .service-tag {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, rgba(212, 165, 116, 0.15), rgba(154, 123, 175, 0.15));
 }
 .action-buttons {
     text-align: center;
@@ -608,7 +751,73 @@
 .portfolio-stats i {
     color: #d4a574;
 }
+@media (max-width: 1024px) {
+    .services-system {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 800px;
+    }
+    
+    .services-column {
+        position: static;
+        top: auto;
+    }
+    
+    .masters-group {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
 
+@media (max-width: 768px) {
+    .services-page h1 {
+        font-size: 2.2rem;
+    }
+    
+    .services-page .subtitle {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+    
+    .services-system {
+        padding: 0 15px;
+    }
+    
+    .services-column,
+    .masters-column {
+        padding: 25px 20px;
+    }
+    
+    .service-item {
+        padding: 18px;
+    }
+    
+    .master-card {
+        margin-bottom: 20px;
+    }
+    
+    .masters-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-page h1 {
+        font-size: 1.8rem;
+    }
+    
+    .services-column h2,
+    .masters-title {
+        font-size: 1.5rem;
+    }
+    
+    .service-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .master-card h3 {
+        font-size: 1.2rem;
+    }
+}
 /* страница 3 */
 
 .booking-page .main {
