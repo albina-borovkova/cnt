@@ -1445,78 +1445,91 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-
-/* ппппп */
-
 .master-option:hover .master-img-small::before {
     opacity: 1;
 }
 .master-select input[type="radio"]:checked + .master-option .master-img-small {
     border-color: #d4a574;
-    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.2);
-    transform: scale(1.05);
+    box-shadow: 0 0 0 5px rgba(212, 165, 116, 0.15), 0 12px 35px rgba(212, 165, 116, 0.25);
+    transform: scale(1.08);
 }
 .master-option:hover .master-img-small {
-    transform: scale(1.05);
-    border-color: #d4a574;
+    transform: scale(1.08);
+    border-color: #ffd8b8;
 }
 .master-info-small {
     flex-grow: 1;
 }
 .master-info-small h4 {
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
     color: #3a2c5f;
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+}
+.master-info-small h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(to right, #ffd8b8, #d4a574);
+    border-radius: 2px;
 }
 .master-info-small .master-spec {
     color: #d4a574;
-    font-size: 1rem;
-    margin: 0 0 8px 0;
-    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+    display: inline-block;
+    padding: 6px 15px;
+    background: rgba(212, 165, 116, 0.08);
+    border-radius: 15px;
 }
 .master-info-small .master-exp {
     color: #777;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
 }
 .master-info-small .master-exp::before {
-    content: '⭐';
-    font-size: 0.9rem;
-    color: #ffc107;
+    content: '✨';
+    font-size: 1rem;
 }
 .master-select input[type="radio"]:checked + .master-option::after {
     content: '✓';
     position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: linear-gradient(to right, #d4a574, #9a7baf);
+    right: 25px;
+    top: 30px;
+    background: linear-gradient(135deg, #ffd8b8, #d4a574);
     color: white;
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 16px;
-    box-shadow: 0 3px 8px rgba(212, 165, 116, 0.4);
+    font-size: 18px;
+    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+    animation: checkmark 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 /* шаг 1 */
 .booking-summary {
-    background: linear-gradient(135deg, rgba(212, 165, 116, 0.1), rgba(154, 123, 175, 0.05));
-    border-radius: 15px;
-    padding: 30px;
-    margin: 40px 0;
-    border: 1px solid rgba(212, 165, 116, 0.2);
-    box-shadow: 0 8px 25px rgba(106, 81, 109, 0.08);
+    background: linear-gradient(135deg, rgba(255, 248, 242, 0.8), rgba(255, 244, 235, 0.6));
+    border-radius: 25px;
+    padding: 40px;
+    margin: 50px 0;
+    border: 1px solid rgba(212, 165, 116, 0.25);
+    box-shadow: 0 20px 50px rgba(106, 81, 109, 0.08);
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 .booking-summary::before {
     content: '';
@@ -1524,39 +1537,44 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 5px;
-    background: linear-gradient(to right, #d4a574, #9a7baf);
+    height: 6px;
+    background: linear-gradient(to right, #ffd8b8, #d4a574, #9a7baf);
+    border-radius: 25px 25px 0 0;
 }
 .booking-summary:hover {
-    border-color: rgba(212, 165, 116, 0.3);
-    box-shadow: 0 12px 35px rgba(106, 81, 109, 0.12);
-    transform: translateY(-3px);
+    border-color: rgba(212, 165, 116, 0.35);
+    box-shadow: 0 25px 60px rgba(106, 81, 109, 0.12);
+    transform: translateY(-5px);
 }
 .booking-summary h3 {
     color: #3a2c5f;
-    margin-bottom: 25px;
-    font-size: 1.5rem;
+    margin-bottom: 35px;
+    font-size: 1.7rem;
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding-bottom: 15px;
+    gap: 15px;
+    padding-bottom: 25px;
     border-bottom: 2px solid rgba(212, 165, 116, 0.2);
-    font-weight: 700;
+    font-weight: 800;
 }
 .booking-summary h3 i {
-    background: linear-gradient(to right, #4CAF50, #45a049);
+    background: linear-gradient(to right, #8bc78b, #6a9c6a);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 .summary-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px dashed rgba(212, 165, 116, 0.15);
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px dashed rgba(212, 165, 116, 0.25);
+    transition: all 0.3s ease;
+}
+.summary-item:hover {
+    border-bottom-color: rgba(212, 165, 116, 0.4);
 }
 .summary-item:last-child {
     border-bottom: none;
@@ -1564,39 +1582,48 @@ body {
     padding-bottom: 0;
 }
 .summary-item span {
-    color: #666;
-    font-size: 1rem;
+    color: #777;
+    font-size: 1.1rem;
     font-weight: 600;
-    min-width: 150px;
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.summary-item span::before {
+    content: '→';
+    color: #d4a574;
+    font-size: 1.2rem;
 }
 .summary-item strong {
     color: #3a2c5f;
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 800;
     text-align: right;
-    min-width: 250px;
+    min-width: 260px;
+    padding: 12px 25px;
 }
 .summary-service-text,
 .summary-master-text,
 .summary-time-text {
-    background: linear-gradient(to right, rgba(212, 165, 116, 0.15), rgba(154, 123, 175, 0.1));
+    background: linear-gradient(135deg, rgba(255, 216, 184, 0.15), rgba(212, 165, 116, 0.1));
     color: #d4a574;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 12px 25px;
+    border-radius: 15px;
     display: inline-block;
-    font-weight: 700;
-    min-width: 200px;
+    font-weight: 800;
+    min-width: 220px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(212, 165, 116, 0.25);
-    box-shadow: 0 3px 10px rgba(212, 165, 116, 0.15);
-    animation: textChange 0.4s ease;
+    border: 1px solid rgba(212, 165, 116, 0.3);
+    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.12);
+    animation: textChange 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes textChange {
     0% { 
         opacity: 0; 
-        transform: translateY(8px) scale(0.95); 
+        transform: translateY(10px) scale(0.95); 
     }
     100% { 
         opacity: 1; 
@@ -1605,25 +1632,39 @@ body {
 }
 .action-buttons {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
+    position: relative;
+    padding-top: 40px;
+}
+.action-buttons::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.3), transparent);
 }
 .btn-large {
     display: inline-block;
-    background: linear-gradient(to right, #d4a574, #e8c39e);
+    background: linear-gradient(135deg, #ffd8b8, #d4a574);
     color: white;
-    padding: 16px 45px;
+    padding: 20px 55px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
+    font-weight: 800;
+    font-size: 1.2rem;
     letter-spacing: 0.5px;
     border: none;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.3);
+    box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
     position: relative;
     overflow: hidden;
     z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 .btn-large::before {
     content: '';
@@ -1632,17 +1673,32 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #c8955c, #dbb894);
+    background: linear-gradient(135deg, #e8c39e, #c8955c);
     transition: left 0.5s ease;
     z-index: -1;
     border-radius: 50px;
+}
+.btn-large::after {
+    content: '→';
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 .btn-large:hover::before {
     left: 0;
 }
 .btn-large:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(212, 165, 116, 0.4);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(212, 165, 116, 0.4);
+    padding-right: 65px;
+}
+.btn-large:hover::after {
+    opacity: 1;
+    right: 35px;
 }
 
 /* шаг 2 */
