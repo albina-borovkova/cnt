@@ -2015,10 +2015,19 @@ body {
 }
 .form-group label {
     display: block;
-    margin-bottom: 12px;
-    font-weight: 600;
+    margin-bottom: 15px;
+    font-weight: 700;
     color: #3a2c5f;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 15px;
+}
+.form-group label::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #d4a574;
+    font-size: 1.3rem;
 }
 .form-group input[type="text"],
 .form-group input[type="tel"],
@@ -2027,12 +2036,25 @@ body {
 .form-group textarea,
 .form-group select {
     width: 100%;
-    padding: 14px 18px;
-    border: 2px solid #eee;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    background: #fcfcfc;
+    padding: 16px 20px;
+    border: 2px solid #f8f5f0;
+    border-radius: 15px;
+    font-size: 1.05rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: white;
+    font-family: inherit;
+    color: #3a2c5f;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+.form-group input[type="text"]:hover,
+.form-group input[type="tel"]:hover,
+.form-group input[type="email"]:hover,
+.form-group input[type="date"]:hover,
+.form-group textarea:hover,
+.form-group select:hover {
+    border-color: #ffd8b8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212, 165, 116, 0.1);
 }
 .form-group input:focus,
 .form-group textarea:focus,
@@ -2040,44 +2062,61 @@ body {
     border-color: #d4a574;
     background: white;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+    box-shadow: 0 0 0 4px rgba(212, 165, 116, 0.15), 0 15px 35px rgba(212, 165, 116, 0.15);
+    transform: translateY(-3px);
 }
 .form-group textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
+    line-height: 1.6;
 }
 .date-hint, .input-hint {
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #888;
+    margin-top: 12px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, rgba(255, 216, 184, 0.08), rgba(212, 165, 116, 0.04));
+    border-radius: 12px;
+    border-left: 4px solid #d4a574;
 }
 .date-hint i, .input-hint i {
     color: #d4a574;
+    font-size: 1.1rem;
 }
 
 .time-slots {
-    background: linear-gradient(135deg, #f9f9f9, #f5f5f5);
-    border-radius: 12px;
-    padding: 20px;
-    border: 1px solid #eee;
+    background: linear-gradient(135deg, rgba(255, 248, 242, 0.8), rgba(255, 244, 235, 0.6));
+    border-radius: 20px;
+    padding: 30px;
+    border: 2px solid #f8f5f0;
+    backdrop-filter: blur(10px);
 }
 .time-row {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 2px dashed rgba(212, 165, 116, 0.2);
 }
 .time-row:last-child {
     margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 .time-label {
-    width: 70px;
-    font-weight: 600;
+    width: 80px;
+    font-weight: 800;
     color: #3a2c5f;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    padding-right: 20px;
+    position: relative;
 }
+
+/* ппппп */
+
 .time-options {
     display: flex;
     flex-wrap: wrap;
